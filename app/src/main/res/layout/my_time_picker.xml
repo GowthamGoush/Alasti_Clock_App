@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_height="650dp"
+        android:padding="10dp"
+        >
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/checkSat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:text="Sat"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/checkWed"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/checkSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:text="Sun"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toStartOf="@+id/checkWed"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/checkMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/checkWed"
+            android:checked="true"
+            android:text="Mon" />
+
+        <CheckBox
+            android:id="@+id/checkWed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:text="Wed"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:checked="true"/>
+
+        <CheckBox
+            android:id="@+id/checkTue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:text="Tue"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toStartOf="@+id/checkWed"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:id="@+id/checkFri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/checkWed"
+            android:checked="true"
+            android:text="Fri" />
+
+        <CheckBox
+            android:id="@+id/checkThurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:text="Thurs"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/checkWed"
+            android:checked="true"/>
+
+        <TextView
+            android:id="@+id/action_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:text="SET ALARM"
+            android:textColor="#33bbff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:text="CANCEL"
+            android:textColor="#33bbff"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/toneSpinner"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/checkWed"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

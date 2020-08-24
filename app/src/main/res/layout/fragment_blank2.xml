@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#211044">
+
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_circle" />
+
+        <ImageView
+            android:id="@+id/anchor"
+            android:layout_width="250dp"
+            android:layout_height="230dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_anchor" />
+
+        <TextView
+            android:id="@+id/timerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/clock"
+            android:layout_marginTop="12dp"
+            android:textColor="#F0EDF6"
+            android:textSize="30dp"
+            android:text="00:00"
+            android:fontFamily="@font/orbitron_medium"/>
+
+        <ImageButton
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timerCount"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/ic_stop"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timerCount"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/ic_start"
+            android:background="@null"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_input"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/timerCount"
+            android:layout_centerHorizontal="true"
+            android:hint="Minutes"
+            android:textColorHint="@color/design_default_color_on_primary"
+            android:inputType="number"
+            android:maxLength="4"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingVertical="8dp"
+            android:gravity="center"
+            android:textColor="@color/design_default_color_background"/>
+
+        <ImageButton
+            android:id="@+id/button_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/edit_text_input"
+            android:layout_toEndOf="@+id/edit_text_input"
+            android:layout_marginStart="20dp"
+            android:text="Set"
+            android:src="@drawable/ic_set"
+            android:background="@null"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

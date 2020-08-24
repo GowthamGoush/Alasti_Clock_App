@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="12dp"
+    android:layout_marginHorizontal="4dp"
+    android:id="@+id/alarm_card"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        >
+
+        <TextView
+            android:id="@+id/content_text1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Time"
+            android:textSize="20sp"
+            android:fontFamily="@font/orbitron_medium"/>
+
+        <Switch
+            android:id="@+id/alarmOnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:checked="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/fragment1_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@id/content_text1"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/frag_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:id="@+id/sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Sun"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/sunday"
+                android:layout_marginTop="10dp"
+                android:text="Mon"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/monday"
+                android:layout_marginTop="10dp"
+                android:text="Tue"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/tuesday"
+                android:layout_marginTop="10dp"
+                android:text="Wed"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/wednesday"
+                android:layout_marginTop="10dp"
+                android:text="Thurs"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/thursday"
+                android:layout_marginTop="10dp"
+                android:text="Fri"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/friday"
+                android:layout_marginTop="10dp"
+                android:text="Sat"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
