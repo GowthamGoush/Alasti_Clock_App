@@ -14,8 +14,33 @@ public class AlertReceiver extends BroadcastReceiver {
         NotificationCompat.Builder nb = notificationHelper.getChannelNotification();
         notificationHelper.getManager().notify(1, nb.build());
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(context,R.raw.rap_music);
-        mediaPlayer.setScreenOnWhilePlaying(true);
-        mediaPlayer.start();
+        int tone = intent.getIntExtra("Value",0);
+
+        if(tone == 1){
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.classic_music);
+            mediaPlayer.setScreenOnWhilePlaying(true);
+            mediaPlayer.start();
+        }
+        else if(tone == 2){
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.crazy_music);
+            mediaPlayer.setScreenOnWhilePlaying(true);
+            mediaPlayer.start();
+        }
+        else if(tone == 3){
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.iphone_music);
+            mediaPlayer.setScreenOnWhilePlaying(true);
+            mediaPlayer.start();
+        }
+        else if(tone == 4){
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.trumpet_music);
+            mediaPlayer.setScreenOnWhilePlaying(true);
+            mediaPlayer.start();
+        }
+        else {
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, R.raw.rap_music);
+            mediaPlayer.setScreenOnWhilePlaying(true);
+            mediaPlayer.start();
+        }
+
     }
 }

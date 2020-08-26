@@ -1,7 +1,10 @@
 package com.example.alasti;
 
 import android.animation.ObjectAnimator;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -26,11 +29,13 @@ import android.widget.Toast;
 import java.util.Locale;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
+import static android.content.Context.MODE_PRIVATE;
 
 public class BlankFragment2 extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final long START_TIME_IN_MILLIS = 600000;
 
     private String mParam1;
     private String mParam2;
@@ -171,6 +176,7 @@ public class BlankFragment2 extends Fragment {
                 mEditTextInput.setVisibility(View.VISIBLE);
                 mButtonSet.setVisibility(View.VISIBLE);
                 startPause.setVisibility(View.GONE);
+                Toast.makeText(getContext(),"Time is Up !!", Toast.LENGTH_SHORT).show();
             }
         }.start();
         if(!resume){

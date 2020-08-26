@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -31,7 +32,7 @@ public class MyTimePicker extends DialogFragment {
     private CheckBox Sun,Sat,Mon,Tue,Wed,Thurs,Fri;
     private Spinner spinner;
     private int[] checked = new int[7];
-    private int hours,minutes,pos;
+    private int hours,minutes,pos,count=0;
     private String[] ringTones = { "Rap", "Classic","Crazy","Iphone","Trumpet"};
 
     @Nullable
@@ -88,21 +89,27 @@ public class MyTimePicker extends DialogFragment {
                 if(!Sun.isChecked()){
                     checked[0]=0;
                 }
+
                 if(!Sat.isChecked()){
                     checked[6]=0;
                 }
+
                 if(!Mon.isChecked()){
                     checked[1]=0;
                 }
+
                 if(!Tue.isChecked()){
                     checked[2]=0;
                 }
+
                 if(!Wed.isChecked()){
                     checked[3]=0;
                 }
+
                 if(!Thurs.isChecked()){
                     checked[4]=0;
                 }
+
                 if(!Fri.isChecked()){
                     checked[5]=0;
                 }
@@ -110,9 +117,20 @@ public class MyTimePicker extends DialogFragment {
                 hours = timePicker.getCurrentHour();
                 minutes = timePicker.getCurrentMinute();
 
-                mOnInputSelected.sendInput(hours,minutes,checked,pos);
+                for (int i=0;i<7;i++){
+                    if(checked[i]==0){
+                        count+=1;
+                    }
+                }
 
-                getDialog().dismiss();
+                if(count==7){
+                    Toast.makeText(getContext(),"Choose a day !",Toast.LENGTH_SHORT).show();
+                    count=0;
+                }
+                else {
+                    mOnInputSelected.sendInput(hours,minutes,checked,pos);
+                    getDialog().dismiss();
+                }
             }
         });
 

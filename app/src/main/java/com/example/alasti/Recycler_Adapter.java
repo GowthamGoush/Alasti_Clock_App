@@ -35,7 +35,7 @@ public class Recycler_Adapter extends RecyclerView.Adapter<Recycler_Adapter.Frag
 
     public class Frag_Viewholder extends RecyclerView.ViewHolder {
 
-        public TextView textView1,sun,mon,tue,wed,thur,fri,sat;
+        public TextView textView1, sun, mon, tue, wed, thur, fri, sat;
         public RelativeLayout expandableLayout;
         public CardView cardView;
         public ImageView imageView;
@@ -73,11 +73,11 @@ public class Recycler_Adapter extends RecyclerView.Adapter<Recycler_Adapter.Frag
                 @Override
                 public void onClick(View v) {
                     AlarmManager alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-                    Intent intent = new Intent(mActivity,AlertReceiver.class);
-                    for(int i=0;i<7;i++){
+                    Intent intent = new Intent(mActivity, AlertReceiver.class);
+                    for (int i = 0; i < 7; i++) {
                         int[] requests = Frag1List.get(getAdapterPosition()).getRequestCodes();
-                        if(requests[i] != 0){
-                            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext ,requests[i], intent, 0);
+                        if (requests[i] != 0) {
+                            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, requests[i], intent, 0);
                             assert alarmManager != null;
                             alarmManager.cancel(pendingIntent);
                         }
@@ -90,7 +90,7 @@ public class Recycler_Adapter extends RecyclerView.Adapter<Recycler_Adapter.Frag
         }
     }
 
-    public Recycler_Adapter(ArrayList<AlarmDetails> List, Context context ,Activity activity) {
+    public Recycler_Adapter(ArrayList<AlarmDetails> List, Context context, Activity activity) {
         Frag1List = List;
         mContext = context;
         mActivity = activity;
@@ -116,50 +116,90 @@ public class Recycler_Adapter extends RecyclerView.Adapter<Recycler_Adapter.Frag
 
         int[] checking = Item.getRequestCodes();
 
-        if(checking[0] != 0){
+        if (checking[0] != 0) {
             holder.sun.setTextColor(Color.CYAN);
         }
-        if(checking[1] != 0){
+        if (checking[1] != 0) {
             holder.mon.setTextColor(Color.CYAN);
         }
-        if(checking[2] != 0){
+        if (checking[2] != 0) {
             holder.tue.setTextColor(Color.CYAN);
         }
-        if(checking[3] != 0){
+        if (checking[3] != 0) {
             holder.wed.setTextColor(Color.CYAN);
         }
-        if(checking[4] != 0){
+        if (checking[4] != 0) {
             holder.thur.setTextColor(Color.CYAN);
         }
-        if(checking[5] != 0){
+        if (checking[5] != 0) {
             holder.fri.setTextColor(Color.CYAN);
         }
-        if(checking[6] != 0){
+        if (checking[6] != 0) {
             holder.sat.setTextColor(Color.CYAN);
         }
 
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+        holder.aSwitch.setVisibility(isExpanded ? View.GONE : View.VISIBLE);
+
+        int count = 0;
+        int isSwitched;
+
+        isSwitched = Frag1List.get(position).getSwitched();
+
+        if (isSwitched == 0 && count == 0){
+            holder.aSwitch.setChecked(false);
+            count = 1;
+        }
 
         holder.aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    Toast toast = Toast.makeText(mContext,"Alarm ON",Toast.LENGTH_SHORT);
+                if (isChecked) {
+
+                    Calendar now = Calendar.getInstance();
+                    now.set(Calendar.SECOND, 0);
+                    now.set(Calendar.MILLISECOND, 0);
+
+                    for (int i = 0; i < 7; i++) {
+                        int[] requests = Frag1List.get(position).getRequestCodes();
+                        if (requests[i] != 0) {
+
+                            Calendar c = Calendar.getInstance();
+                            c.set(Calendar.DAY_OF_WEEK,i+1);
+                            c.set(Calendar.HOUR_OF_DAY, Frag1List.get(position).getHours());
+                            c.set(Calendar.MINUTE,Frag1List.get(position).getMinutes());
+                            c.set(Calendar.SECOND, 0);
+                            c.set(Calendar.MILLISECOND, 0);
+
+                            if(c.before(now)) {
+                                c.add(Calendar.DATE, 7);
+                            }
+
+                            AlarmManager alarmManager = (AlarmManager) mActivity.getSystemService(Context.ALARM_SERVICE);
+                            Intent intent = new Intent(mActivity, AlertReceiver.class);
+                            intent.putExtra("Value",Frag1List.get(position).getTone());
+
+                            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, requests[i], intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                            alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
+                        }
+                    }
+                    Frag1List.get(position).setSwitched(1);
+                    Toast toast = Toast.makeText(mContext, "Alarm ON", Toast.LENGTH_SHORT);
                     toast.show();
-                }
-                else {
-                    Toast toast = Toast.makeText(mContext,"Alarm OFF",Toast.LENGTH_SHORT);
+                } else {
+                    Toast toast = Toast.makeText(mContext, "Alarm OFF", Toast.LENGTH_SHORT);
                     toast.show();
                     AlarmManager alarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-                    Intent intent = new Intent(mActivity,AlertReceiver.class);
-                    for(int i=0;i<7;i++){
+                    Intent intent = new Intent(mActivity, AlertReceiver.class);
+                    for (int i = 0; i < 7; i++) {
                         int[] requests = Frag1List.get(position).getRequestCodes();
-                        if(requests[i] != 0){
-                            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext ,requests[i], intent, 0);
+                        if (requests[i] != 0) {
+                            PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, requests[i], intent, 0);
                             assert alarmManager != null;
                             alarmManager.cancel(pendingIntent);
                         }
                     }
+                    Frag1List.get(position).setSwitched(0);
                 }
             }
         });
