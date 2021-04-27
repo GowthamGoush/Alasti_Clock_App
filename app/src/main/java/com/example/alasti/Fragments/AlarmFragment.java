@@ -31,7 +31,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class BlankFragment extends Fragment implements MyTimePicker.OnInputSelected {
+public class AlarmFragment extends Fragment implements MyTimePicker.OnInputSelected {
 
 
     private static final String ARG_PARAM1 = "param1";
@@ -40,12 +40,12 @@ public class BlankFragment extends Fragment implements MyTimePicker.OnInputSelec
     private String mParam1;
     private String mParam2;
 
-    public BlankFragment() {
+    public AlarmFragment() {
         // Required empty public constructor
     }
 
-    public static BlankFragment newInstance(String param1, String param2) {
-        BlankFragment fragment = new BlankFragment();
+    public static AlarmFragment newInstance(String param1, String param2) {
+        AlarmFragment fragment = new AlarmFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -90,7 +90,7 @@ public class BlankFragment extends Fragment implements MyTimePicker.OnInputSelec
             @Override
             public void onClick(View v) {
                 MyTimePicker dialog = new MyTimePicker();
-                dialog.setTargetFragment(BlankFragment.this, 1);
+                dialog.setTargetFragment(AlarmFragment.this, 1);
                 dialog.show(getFragmentManager(), "MyCustomDialog");
             }
         });

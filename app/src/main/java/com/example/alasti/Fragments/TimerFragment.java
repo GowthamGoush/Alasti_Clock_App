@@ -25,7 +25,7 @@ import java.util.Locale;
 
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
-public class BlankFragment2 extends Fragment {
+public class TimerFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -34,12 +34,12 @@ public class BlankFragment2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BlankFragment2() {
+    public TimerFragment() {
         // Required empty public constructor
     }
 
-    public static BlankFragment2 newInstance(String param1, String param2) {
-        BlankFragment2 fragment = new BlankFragment2();
+    public static TimerFragment newInstance(String param1, String param2) {
+        TimerFragment fragment = new TimerFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

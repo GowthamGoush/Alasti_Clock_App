@@ -27,7 +27,7 @@ import com.example.alasti.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlankFragment3 extends Fragment {
+public class StopWatchFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -35,12 +35,12 @@ public class BlankFragment3 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BlankFragment3() {
+    public StopWatchFragment() {
         // Required empty public constructor
     }
 
-    public static BlankFragment3 newInstance(String param1, String param2) {
-        BlankFragment3 fragment = new BlankFragment3();
+    public static StopWatchFragment newInstance(String param1, String param2) {
+        StopWatchFragment fragment = new StopWatchFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

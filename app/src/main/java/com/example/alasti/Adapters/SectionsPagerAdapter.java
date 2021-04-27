@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.alasti.Fragments.BlankFragment;
-import com.example.alasti.Fragments.BlankFragment2;
-import com.example.alasti.Fragments.BlankFragment3;
+import com.example.alasti.Fragments.AlarmFragment;
+import com.example.alasti.Fragments.TimerFragment;
+import com.example.alasti.Fragments.StopWatchFragment;
 import com.example.alasti.R;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -30,11 +30,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch(position){
 
-            case 0 : fragment = BlankFragment.newInstance("Alarm","Tab1");
+            case 0 : fragment = AlarmFragment.newInstance("Alarm","Tab1");
                 break;
-            case 1 : fragment = BlankFragment2.newInstance("Stopwatch","Tab2");
+            case 1 : fragment = TimerFragment.newInstance("Stopwatch","Tab2");
                 break;
-            case 2 : fragment = BlankFragment3.newInstance("sample","samp");
+            case 2 : fragment = StopWatchFragment.newInstance("sample","samp");
                 break;
         }
 
