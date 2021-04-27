@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigation.add(new MeowBottomNavigation.Model(R.string.Alarm_ID, R.drawable.ic_alarm));
         bottomNavigation.add(new MeowBottomNavigation.Model(R.string.Timer_ID, R.drawable.ic_timer));
-        bottomNavigation.add(new MeowBottomNavigation.Model(R.string.Stopwatch_ID, R.drawable.ic_stopwatch));
+        bottomNavigation.add(new MeowBottomNavigation.Model(R.string.Stopwatch_ID, R.drawable.ic_stop_watch));
 
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
