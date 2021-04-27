@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.ViewHolders;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.alasti.Models.PageViewModel;
+import com.example.alasti.R;
 
 /**
  * A placeholder fragment containing a simple view.
