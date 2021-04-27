@@ -3,5 +3,8 @@
     <string name="tab_text_1">Alarm</string>
     <string name="tab_text_2">Timer</string>
     <string name="tab_text_3">Stopwatch</string>
+    <string name="Alarm_ID">1</string>
+    <string name="Timer_ID">2</string>
+    <string name="Stopwatch_ID">3</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
