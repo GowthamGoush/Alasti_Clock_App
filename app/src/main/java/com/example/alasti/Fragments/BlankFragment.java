@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.Toast;
 
 import com.example.alasti.Models.AlarmDetails;
@@ -78,6 +80,10 @@ public class BlankFragment extends Fragment implements MyTimePicker.OnInputSelec
         recyclerView.setHasFixedSize(true);
         adapter = new Recycler_Adapter(Items,getContext(),getActivity());
         recyclerView.setAdapter(adapter);
+
+        LayoutAnimationController layoutAnimationController = AnimationUtils.loadLayoutAnimation(getContext(), R.anim.layout_anim_fall_down);
+
+        recyclerView.setLayoutAnimation(layoutAnimationController);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         fab1.setOnClickListener(new View.OnClickListener() {
