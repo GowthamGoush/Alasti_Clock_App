@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Services;
 
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
+
+import com.example.alasti.R;
 
 public class NotificationHelper extends ContextWrapper {
     public static final String channelID = "channelID";
