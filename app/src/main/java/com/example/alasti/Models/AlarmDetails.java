@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Models;
 
 public class AlarmDetails {
 

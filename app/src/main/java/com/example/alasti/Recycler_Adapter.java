@@ -3,7 +3,6 @@ package com.example.alasti;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -22,10 +21,10 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.alasti.Models.AlarmDetails;
+
 import java.util.ArrayList;
 import java.util.Calendar;
-
-import static java.security.AccessController.getContext;
 
 public class Recycler_Adapter extends RecyclerView.Adapter<Recycler_Adapter.Frag_Viewholder> {
 
