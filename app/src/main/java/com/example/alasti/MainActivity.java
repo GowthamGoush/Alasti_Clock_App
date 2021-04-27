@@ -2,6 +2,7 @@ package com.example.alasti;
 
 import android.os.Bundle;
 
+import com.example.alasti.Adapters.SectionsPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;

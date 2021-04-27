@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Adapters;
 
 import android.content.Context;
 
@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.alasti.Fragments.BlankFragment;
 import com.example.alasti.Fragments.BlankFragment2;
 import com.example.alasti.Fragments.BlankFragment3;
+import com.example.alasti.R;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 

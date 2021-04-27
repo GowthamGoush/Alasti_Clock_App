@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Adapters;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,6 +22,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alasti.Models.AlarmDetails;
+import com.example.alasti.R;
 import com.example.alasti.Services.AlertReceiver;
 
 import java.util.ArrayList;

@@ -20,7 +20,7 @@ import com.example.alasti.Models.AlarmDetails;
 import com.example.alasti.Services.AlertReceiver;
 import com.example.alasti.MyTimePicker;
 import com.example.alasti.R;
-import com.example.alasti.Recycler_Adapter;
+import com.example.alasti.Adapters.Recycler_Adapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
