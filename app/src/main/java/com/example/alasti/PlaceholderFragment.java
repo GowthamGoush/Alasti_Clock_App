@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.alasti.Models.PageViewModel;
+
 /**
  * A placeholder fragment containing a simple view.
  */

@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Models;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
