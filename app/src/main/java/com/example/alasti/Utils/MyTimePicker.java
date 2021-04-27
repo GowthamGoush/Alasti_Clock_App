@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Utils;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.alasti.R;
 
 public class MyTimePicker extends DialogFragment {
 

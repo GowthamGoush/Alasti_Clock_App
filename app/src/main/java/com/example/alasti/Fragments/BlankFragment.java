@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.example.alasti.Models.AlarmDetails;
 import com.example.alasti.Services.AlertReceiver;
-import com.example.alasti.MyTimePicker;
+import com.example.alasti.Utils.MyTimePicker;
 import com.example.alasti.R;
 import com.example.alasti.Adapters.Recycler_Adapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
