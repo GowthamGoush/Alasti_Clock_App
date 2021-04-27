@@ -8,10 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.alasti.BlankFragment;
-import com.example.alasti.BlankFragment2;
-import com.example.alasti.BlankFragment3;
-import com.example.alasti.R;
+import com.example.alasti.Fragments.BlankFragment;
+import com.example.alasti.Fragments.BlankFragment2;
+import com.example.alasti.Fragments.BlankFragment3;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 

@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,11 +18,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.alasti.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.alasti;
+package com.example.alasti.Fragments;
 
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
@@ -18,6 +18,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.alasti.R;
 
 import java.util.Locale;
 
