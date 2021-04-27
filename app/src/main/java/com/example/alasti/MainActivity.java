@@ -50,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.string.Alarm_ID:
                         viewPager.setCurrentItem(0);
                         break;
-                    case R.string.Stopwatch_ID:
+                    case R.string.Timer_ID:
                         viewPager.setCurrentItem(1);
                         break;
-                    case R.string.Timer_ID:
-                        viewPager.setCurrentItem(3);
+                    case R.string.Stopwatch_ID:
+                        viewPager.setCurrentItem(2);
                         break;
                 }
             }
