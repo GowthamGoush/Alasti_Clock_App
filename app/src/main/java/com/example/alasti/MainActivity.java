@@ -1,6 +1,7 @@
 package com.example.alasti;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "BOTTOM_NAV_BAR_ITEM";
     private MeowBottomNavigation bottomNavigation;
 
     @Override
@@ -31,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(MainActivity.this, "clicked item : " + item.getId(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onReselectItem");
             }
         });
 
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(MainActivity.this, "clicked item : " + item.getId(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onClickItem");
             }
         });
 
